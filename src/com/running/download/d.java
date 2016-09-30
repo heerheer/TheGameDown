@@ -12,7 +12,7 @@ import org.apache.commons.codec.digest.*;
 import org.apache.commons.io.IOUtils;  
   
 public class d{
-	static String fa = "";//Source File
+	private static String fa = "";//Source File
      public static String getMd5ByFile(File file) throws FileNotFoundException {
             String value = null;  
             FileInputStream in = new FileInputStream(fa);  
@@ -35,8 +35,8 @@ public class d{
         }  
         return value;  
         }  
-    public static void main(String[] args) throws IOException {  
-        String path=fa;  
+    public static void main(String[] args) throws IOException {
+    	String path =fa;
         String v = getMd5ByFile(new File(path));  
         System.out.println(v.toUpperCase());  
         FileInputStream fis= new FileInputStream(path);
@@ -44,13 +44,13 @@ public class d{
         IOUtils.closeQuietly(fis);    
         String md = "";//Source File MD5
         if(v.toUpperCase() == md){
-        	JOptionPane.showMessageDialog(null, "下载成功，解压游戏，开始你的游戏之旅吧");//Download Success
+        	JOptionPane.showMessageDialog(null, "涓嬭浇鎴愬姛锛岃В鍘嬫父鎴忥紝寮�濮嬩綘鐨勬父鎴忎箣鏃呭惂");//Download Success
         	System.exit(0);
         }
         else{
         	File f = new File("");//Source File
         	f.delete();
-        JOptionPane.showMessageDialog(null, "下载失败，请重试");//Download Fail
+        JOptionPane.showMessageDialog(null, "涓嬭浇澶辫触锛岃閲嶈瘯");//Download Fail
         System.exit(0);
         }
     }  
