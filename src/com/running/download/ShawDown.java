@@ -16,7 +16,7 @@ import java.net.URLConnection;
 import javax.swing.JOptionPane;
 
 public class ShawDown {
-	static String fa = "http://192.168.31.219/minecraft/Minecraft1.10.2.7z";
+	private static String fa = "http://192.168.31.219/minecraft/Minecraft1.10.2.7z";
     String fileName = null;
     URL url = null;
     InputStream inputStream = null;
@@ -30,7 +30,7 @@ public class ShawDown {
         shawDown.creatFile();
         shawDown.writeResult();
     }
-    //连接
+    //杩炴帴
     public void connection() {
         try {
             url = new URL(fa);
@@ -45,7 +45,7 @@ public class ShawDown {
             e.printStackTrace();
         }
     }
-    //创建本地文件
+    //鍒涘缓鏈湴鏂囦欢
     public void creatFile() {
         file = new File(fileName);
         if (!file.exists()) {
@@ -57,7 +57,7 @@ public class ShawDown {
             }
         }
     }
-    //将从网络获取的文件的InputStream并写入到本地
+    //灏嗕粠缃戠粶鑾峰彇鐨勬枃浠剁殑InputStream骞跺啓鍏ュ埌鏈湴
     private void writeResult() throws IOException {
         FileOutputStream fos = null;
         try {
@@ -85,8 +85,8 @@ public class ShawDown {
                 dos.write(dis.readByte());
             }
         } catch (EOFException e) {
-        	JOptionPane.showMessageDialog(null, "下载成功，解压游戏，开始你的游戏之旅吧");
-        	JOptionPane.showMessageDialog(null, "压缩文件在软件的当前目录，文件名字叫\"Minecraft1.10.2.7z\"");
+        	JOptionPane.showMessageDialog(null, "涓嬭浇鎴愬姛锛岃В鍘嬫父鎴忥紝寮�濮嬩綘鐨勬父鎴忎箣鏃呭惂");
+        	JOptionPane.showMessageDialog(null, "鍘嬬缉鏂囦欢鍦ㄨ蒋浠剁殑褰撳墠鐩綍锛屾枃浠跺悕瀛楀彨\"Minecraft1.10.2.7z\"");
         	System.exit(0);
         } catch (IOException e) {
             // TODO Auto-generated catch block
