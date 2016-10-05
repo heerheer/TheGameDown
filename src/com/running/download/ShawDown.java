@@ -16,20 +16,20 @@ import java.net.URLConnection;
 import javax.swing.JOptionPane;
 
 public class ShawDown {
-	private static String fa = "http://192.168.31.219/minecraft/Minecraft1.10.2.7z";
-    String fileName = null;
-    URL url = null;
-    InputStream inputStream = null;
-    static File file = null;
-    DataOutputStream dos = null;
-    URLConnection con = null;
-    public static void dl(String[] args) throws IOException{
-        ShawDown shawDown = new ShawDown();
-        shawDown.setFileName(fa);
-        shawDown.connection();
-        shawDown.creatFile();
-        shawDown.writeResult();
-    }
+	private static String fa = "";
+	String fileName = null;
+	URL url = null;
+	InputStream inputStream = null;
+	static File file = null;
+	DataOutputStream dos = null;
+	URLConnection con = null;
+	public static void dl(String[] args) throws IOException{
+		ShawDown shawDown = new ShawDown();
+		shawDown.setFileName(fa);
+		shawDown.connection();
+		shawDown.creatFile();
+		shawDown.writeResult();
+	}
     //连接
     public void connection() {
         try {
@@ -85,8 +85,7 @@ public class ShawDown {
                 dos.write(dis.readByte());
             }
         } catch (EOFException e) {
-        	JOptionPane.showMessageDialog(null, "下载成功，解压游戏，开始你的游戏之旅吧");
-        	JOptionPane.showMessageDialog(null, "压缩文件在软件的当前目录，文件名字叫\"Minecraft1.10.2.7z\"");
+        	JOptionPane.showMessageDialog(null, "文件下载成功，请查看"+fa);
         	System.exit(0);
         } catch (IOException e) {
             // TODO Auto-generated catch block
