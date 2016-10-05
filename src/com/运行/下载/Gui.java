@@ -7,14 +7,14 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class Gui{
-	static Button b1 = new Button("¿ªÊ¼ÏÂÔØ");
-	static Button b2 = new Button("ÍË³ö");
+	static Button b1 = new Button("å¼€å§‹ä¸‹è½½~");
+	static Button b2 = new Button("é€€å‡º");
 	public static void ui(String[] args){
-		JFrame w = new JFrame("ÓÎÏ·ÏÂÔØÆ÷");
+		JFrame w = new JFrame("æ¸¸æˆä¸‹è½½å™¨");
 		w.setResizable(false);
 		w.setLocation(200, 200);
 		w.setSize(450,150);
-		//Êµ¼Ê436*113
+		//å®é™…436*113
 		w.setVisible(true);
 		w.setLayout(null);
 		w.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -23,7 +23,7 @@ public class Gui{
 		w.add(b1);
 		w.add(b2);
 		b1.addActionListener(new ActionListener(){public void actionPerformed(ActionEvent e) {
-			JOptionPane.showMessageDialog(null, "ÕıÔÚÏÂÔØ£¬Ã»ÓĞ½ø¶ÈÌõ£¬ÇëÉÔºò£¬²»Òª¹Ø±ÕÖ÷´°¿Ú£¬·ñÔòÎŞ·¨ÏÂÔØ");
+			JOptionPane.showMessageDialog(null, "æ­£åœ¨ä¸‹è½½ï¼Œæ²¡æœ‰è¿›åº¦æ¡ï¼Œè¯·ç¨å€™ï¼Œä¸è¦å…³é—­ä¸»çª—å£ï¼Œå¦åˆ™æ— æ³•ä¸‹è½½");
 			try {
 				ShawDown.dl(args);
 			} catch (IOException e1) {
