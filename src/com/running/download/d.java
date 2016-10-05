@@ -44,13 +44,13 @@ public class d{
         IOUtils.closeQuietly(fis);    
         String md = "";//Source File MD5
         if(v.toUpperCase() == md){
-        	JOptionPane.showMessageDialog(null, "下载成功，解压游戏，开始你的游戏之旅吧");//Download Success
+        	JOptionPane.showMessageDialog(null, "文件下载成功");//Download Success
         	System.exit(0);
         }
         else{
         	File f = new File("");//Source File
         	f.delete();
-        JOptionPane.showMessageDialog(null, "下载失败，请重试");//Download Fail
+        JOptionPane.showMessageDialog(null, "文件下载失败");//Download Fail
         System.exit(0);
         }
     }  
